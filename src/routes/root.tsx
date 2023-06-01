@@ -23,8 +23,8 @@ function getItem(
 }
 
 const items: MenuItem[] = [
-	getItem(<Link to={`contacts/add`}>Your Name</Link>, '1', <AppstoreOutlined />),
-	getItem(<Link to={`contacts/edit`}>Your Name</Link>, '2', <SettingOutlined />),
+	getItem(<Link to={`xmledit`}>Xml文件心博时间计算</Link>, '1', <AppstoreOutlined />),
+	getItem(<Link to={`xmledit`}>Xml文件显示2</Link>, '2', <AppstoreOutlined />),
 ];
 
 
@@ -37,9 +37,8 @@ export default function Root() {
 	return (
 		<>
 			<Layout style={{ minHeight: '100vh' }}>
-				<Sider collapsible collapsed={collapsed} onCollapse={(value) => setCollapsed(value)}>
+				<Sider collapsible theme="dark" collapsed={collapsed} onCollapse={(value) => setCollapsed(value)}>
 					<div className="demo-logo-vertical" />
-					ecg_test
 					<Menu
 						defaultSelectedKeys={['1']}
 						defaultOpenKeys={['1']}
@@ -49,8 +48,8 @@ export default function Root() {
 					/>
 				</Sider>
 				<Layout>
-					<Header style={{ padding: 0, background: colorBgContainer }} />
-					<Content style={{ margin: '0 16px' }}>
+					{/* <Header style={{ padding: 0, background: colorBgContainer }} /> */}
+					<Content style={{ margin: '0 6px', padding: '0 0px' }}>
 						<Outlet />
 					</Content>
 					<Footer style={{ textAlign: 'center' }}>ecg_test ©2023 Created by voipke</Footer>

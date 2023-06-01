@@ -9,7 +9,7 @@ import Root from "./routes/root";
 import EditContact, {action as editAction} from "./routes/edit";
 import Index from "./routes/index";
 import ErrorPage from "./error-page";
-import Contact, {loader as contactLoader, action as contactAction} from "./routes/contact.jsx";
+import XmlEditor from "./routes/xmledit";
 
 import "./styles.css";
 
@@ -21,15 +21,12 @@ const router = createBrowserRouter([
     children: [
       { index: true, element: <Index /> },
       {
-        path: "contacts/:contactId",
-        element: <Contact />,
-        loader: contactLoader,
-        action: contactAction,
+        path: "xmledit",
+        element: <XmlEditor />,
       },
       {
         path: "contacts/:contactId/edit",
         element: <EditContact />,
-        loader: contactLoader,
         action: editAction,
       },
     ]

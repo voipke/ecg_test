@@ -1,11 +1,10 @@
 export default function Index() {
     return (
       <p id="zero-state">
-        This is a demo for React Router.
+        ecg开发辅助工具
         <br />
-        Check out{" "}
-        <a href="https://reactrouter.com">
-          the docs at reactrouter.com
+        <a href="mailto:voipke@163.com">
+        反馈问题
         </a>
         .
       </p>
